@@ -1,3 +1,11 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background: url('/assets/images/star.jpg') no-repeat center fixed;
+  color: white;
+}
 .current {
   color: green;
 }
