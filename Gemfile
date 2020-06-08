@@ -1,3 +1,6 @@
+#source 'https://gems.ruby-china.com'
+#gem 'github-pages', group: :jekyll_plugins
+# gem 'jemoji'
 source "https://rubygems.org"
 
 # Hello! This is where you manage which Jekyll version is used to run.
