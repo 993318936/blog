@@ -31,9 +31,9 @@ kramdown:
   enable_coderay: false
 
 plugins:
-  # - jekyll-gist
-  # - jemoji
-  - jekyll-feed
+   - jekyll-gist
+   - jemoji
+   - jekyll-feed
 
 #
 ###################################
@@ -41,10 +41,10 @@ plugins:
 ####################################
 #
 owner:
-  name: llh
+  name: Linhui, Li
   avatar: avatar.jpg
-  job: "Java & Scala Developer"
-  bio: "A backend developer who loves design awesome things. Working for Dianping at in Shanghai, China."
+  job: "前端工程师"
+  bio: "富有热情和好奇心"
   email: 18310600910@163.com
   disqus-shortname: #username
   twitter:  #username

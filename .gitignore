@@ -2,3 +2,10 @@
 .idea/
 .sass-cache/
 _site/
+.DS_Store
+build
+node_modules
+_site
+sea-modules
+.cache
+Gemfile.lock
