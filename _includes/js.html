@@ -1,5 +1,7 @@
-<script type="text/javascript" src="{{ site.url | `${site.url}/blog` }}/js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="{{ site.url | `${site.url}/blog` }}/js/main.js"></script>
+<script type="text/javascript" src="{{ site.url | relative_url }}/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="{{ site.url | relative_url  }}/js/main.js">
+    console.log('ssss')
+</script>
 {% if site.owner.google.analytics %}
 <!-- Asynchronous Google Analytics snippet -->
 <script>
