@@ -1,15 +1,11 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
-- name: Dianping
-  link: http://www.dianping.com/
-  date: Jan 2017 - <i class="fa fa-clock-o" aria-hidden="true" title="Until Now"></i>
-  job: Java Developer
+- name: Dreamore
+  link: http://www.dreamore.com/
+  date: Jul 2016 - Apr 2018
+  job: Web-front Developer
 
-- name: Madhouse
-  link: http://www.madhouse.cn/
-  date: Mar 2015 - Jan 2017
-  job: Java Developer
-
-- name: Chexiang
-  link: http://www.chexiang.com/
-  date: Jul 2014 - Mar 2015
+- name: GDSD
+  link: http://www.gdlhdljs.chinapower.com.cn/
+  date: Apr 2018 - now
+  job: Web-front Developer
