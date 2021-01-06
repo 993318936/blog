@@ -72,4 +72,29 @@ module.exports = {
   target: 'electron-renderer'
 };
 {% endhighlight %}
-
+## @ngx-translate的同步异步问题
+ngx-translate要根据key值获取翻译的结果有两个方法，一个是：
+{% highlight js%}
+this.translate.get(['endBtn', ...keys] ).subscribe()
+{% endhighlight %}
+方法，一个是：
+{% highlight js%}
+this.translate.instant('yourKey')
+{% endhighlight %}
+这两个方法的区别就是Observe对象那个方法是异步获取的，另一个是同步获取的，因翻译值都是存储在json文件中，读取文件本身是个异步的过程，所以保险起见还是使用subscribe方法读取，实际使用过程中确实偶有发生没有取到翻译值的问题
+## Electron应用中下载文件
+{% highlight js%}
+const link = document.createElement('a');
+link.href = 'yourFileUrl'';
+link.download = name;
+link.click();
+{% endhighlight %}
+## 与Electron通信
+{% highlight js%}
+this.electronService.ipcRenderer.on('setting', (event, action) => { // 监听Electron的返回，监听必须写在发送前面
+Object.assign(this, { startAuto: action.startAuto, shortcutKey: action.shortcutKey, version: action.version });
+});
+this.electronService.ipcRenderer.send('getConfig');
+{% endhighlight %}
+## CMDB应用（待补充）
+字段都是客户自己配置的，且客户要求实现字段要实现一些简单公式功能，例如sum(A1, B1)，或大于x(数字)时颜色显示为红色，或计算某数组某个值的总和。经研究使用new Function功能可以运行js脚本，用特殊符号（我是用[*A*]）去标记参数，然后用正则表达式替换掉参数传给new Function。初步验证了一版这个方案是可行的，等彻底完成一个重要模块后再总结，感觉这个功能还是挺有挑战性的~
